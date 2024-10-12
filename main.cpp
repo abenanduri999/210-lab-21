@@ -29,11 +29,11 @@ class Goat
             color = colors[randColor]; 
         }
 
-        Goat(int a, string n, string c) 
+        Goat(int a, int n, int c) 
         {
             age = a; 
-            name = n;
-            color = c; 
+            name = names[n];
+            color = colors[c]; 
 
         }
 
