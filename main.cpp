@@ -1,6 +1,7 @@
 //COMSC 210 | Lab 21 | Abhishek Nanduri
 
 #include<iostream>
+#include<cstdlib>
 
 using namespace std;
 
@@ -18,6 +19,23 @@ class Goat
         string colors[15] = {"Yellow", "Green", "Blue", "Red", "Brown",
                             "Black", "Grey", "Charcoal", "Silver", "White",
                             "Purple", "Magenta", "Teal", "Ivory", "Wheat" }; 
+
+    public: 
+        Goat()
+        {
+            int randName = rand() % 16;
+            int randColor = rand() % 16;
+            name = names[randName]; 
+            color = colors[randColor]; 
+        }
+
+        Goat(int a, string n, string c) 
+        {
+            age = a; 
+            name = n;
+            color = c; 
+
+        }
 
 };
 
