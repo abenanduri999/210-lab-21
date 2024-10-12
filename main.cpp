@@ -23,6 +23,7 @@ class Goat
     public: 
         Goat()
         {
+            age = (rand() % 20) + 1; 
             int randName = rand() % 16;
             int randColor = rand() % 16;
             name = names[randName]; 
@@ -59,9 +60,9 @@ class DoublyLinkedList {
     public:
         // constructor
         DoublyLinkedList() { head = nullptr; tail = nullptr; }
-        void push_back(int value)
+        void push_back(Goat * g)
         {
-            Node* newNode = new Node(value);
+            Node* newNode = new Node(g);
             if (!tail) // if there's no tail, the list is empty
             head = tail = newNode;
             else
@@ -200,11 +201,15 @@ int main() {
    
     DoublyLinkedList list;
    
-    int size = rand() % (MAX_LS-MIN_LS+1) + MIN_LS;
+   int size = rand() % (MAX_LS-MIN_LS+1) + MIN_LS;
+   
+   Goat * herd = new Goat[size];
    
     for (int i = 0; i < size; ++i)
-        list.push_back(rand() % (MAX_NR-MIN_NR+1) + MIN_NR);
-   
+    {
+        list.push_back(herd);
+    }
+    /*
     cout << "List forward: ";
     list.print();
     cout << "List backward: ";
@@ -213,6 +218,6 @@ int main() {
     list.~DoublyLinkedList();
     cout << "List forward: ";
     list.print();
-   
+    */
     return 0;
 }
