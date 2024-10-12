@@ -6,6 +6,21 @@ using namespace std;
 
 const int MIN_NR = 10, MAX_NR = 99, MIN_LS = 5, MAX_LS = 20;
 
+class Goat 
+{   
+    private:
+        int age; 
+        string name; 
+        string color; 
+        string names[15] = {"Billy", "Bob", "Fred", "Old", "Yeller",
+                            "Winn", "Dixie", "Ruby", "Sonny", "Milo",
+                            "Buddy", "Luka", "Cosmo", "Casper", "Sally"};
+        string colors[15] = {"Yellow", "Green", "Blue", "Red", "Brown",
+                            "Black", "Grey", "Charcoal", "Silver", "White",
+                            "Purple", "Magenta", "Teal", "Ivory", "Wheat" }; 
+
+};
+
 class DoublyLinkedList {
     private:
         struct Node
