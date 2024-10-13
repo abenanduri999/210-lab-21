@@ -130,12 +130,12 @@ class DoublyLinkedList {
            
         }
        
-       /* void delete_node(Goat g)
+       /* void delete_node(int value)
         {
             if (!head) return; // Empty list
                 Node* temp = head;
        
-            while (temp && temp->obj != g)
+            while (temp && temp->data != value)
                 temp = temp->next;
        
             if (!temp) return; // Value not found
@@ -204,6 +204,8 @@ class DoublyLinkedList {
 int main() {
    
     DoublyLinkedList list;
+
+    srand(time(0)); 
    
    int size = rand() % (MAX_LS-MIN_LS+1) + MIN_LS;
    
