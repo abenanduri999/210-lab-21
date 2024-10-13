@@ -169,10 +169,11 @@ class DoublyLinkedList {
        
         while (current)
         {
-            cout << current->obj. << " ";
+            cout << current->obj.getName()<< " "<<"( " << current->obj.getColor()<<", "<<
+            current->obj.getAge()<<" )"<<endl;
             current = current->next;
         }
-        cout << endl;
+        cout << endl<<endl;
         }
 
         void print_reverse()
@@ -182,7 +183,8 @@ class DoublyLinkedList {
            
             while (current)
             {
-                cout << current->obj << " ";
+                cout << current->obj.getName()<< " "<<"( " << current->obj.getColor()<<", "<<
+            current->obj.getAge()<<" )"<<endl;
                 current = current->prev;
             }
             cout << endl;
@@ -211,6 +213,8 @@ int main() {
     {
         list.push_back(herd[i]);
     }
+        list.print(); 
+        list.print_reverse(); 
     /*
     cout << "List forward: ";
     list.print();
