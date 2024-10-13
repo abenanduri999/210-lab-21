@@ -37,7 +37,9 @@ class Goat
             color = colors[c]; 
 
         }
-
+        int getAge() { return age;}
+        string getName() {return name;}
+        string getColor() {return color;}
 };
 
 class DoublyLinkedList {
@@ -157,7 +159,7 @@ class DoublyLinkedList {
             }
             delete temp;
         }
-       
+       */
         void print()
         {
        
@@ -167,7 +169,7 @@ class DoublyLinkedList {
        
         while (current)
         {
-            cout << current->obj << " ";
+            cout << current->obj. << " ";
             current = current->next;
         }
         cout << endl;
@@ -185,7 +187,7 @@ class DoublyLinkedList {
             }
             cout << endl;
         }
-       */
+    
         ~DoublyLinkedList()
         {
             while (head)
